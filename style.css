@@ -1,0 +1,109 @@
+:root{
+    --marker: green;
+    --board: gray;
+    --board-hover: lightblue;
+    --reset: green;
+    --ai-active: dodgerblue;
+    --me-active: red;
+}
+
+
+/* 
+position
+display
+margin
+border
+background(with color)
+padding
+height × width 
+font
+color
+*/
+
+
+*{
+    font-family: Roboto, Helvetica, sans-serif;
+}
+.html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    border: 4px solid black;
+    padding: 10px;
+    width: 350px;
+}
+
+/* ARRANGEMENT */
+.header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s1, .s2, .s3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+/* BUTTON */
+.btn{
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: var(--board);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+
+.btn:hover {background-color: var(--board-hover)}
+
+.btn:active {
+    background-color: var(--board);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.ai-active{
+    background-color: var(--ai-active);
+}
+.me-active{
+    background-color: var(--me-active);
+}
+
+/* SEC1 */
+.top-title{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    border: 4px solid black;
+    padding: 10px 30px;
+}
+.marker-btn{
+    width: 150px;
+    background-color: var(--marker)
+}
+
+
+/* SEC2 */
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.reset{
+    width: 300px;
+    background-color: var(--reset)
+}
+
+/* SEC3 */
